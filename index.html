@@ -1,72 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Carlos Monge Photography</title>
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
     <link href="./css/photobox.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+
+
     <script src='./js/jquery.photobox.js'></script>
     <script src="./js/jquery.easing.1.3.js"></script>
-    <script src="./js/parallax.min.js"></script>
+    <script src="./js/utils.js"></script>
 
     <!-- Image layout -->
     <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
     <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
-
-
+    <script>checkCookie();</script>
 </head>
+
 <body>
-<div class="titleContainer">
-    <div class="title">CARLOS MONGE</div>
-    <hr class="line">
-    <div class="subtitle">PHOTOGRAPHY</div>
-</div>
+    <div class="colorChooser"></div>
 
-<div class="parallax-container" data-parallax="scroll" data-position="top" data-bleed="10"
-     data-image-src="./blackandwhite/24.jpg" data-natural-width="1400" data-natural-height="900"
-     data-androidFix="false">
-   </div>
-
-<section>
-    <div class="container">
-        <h2>Portfolio</h2>
-        <div id="gallery" class="grid">
-            <script>
-                $(function () {
-                    var buffer = '<div class="grid-sizer"></div>';
-                    for (var i = 1; i <= 36; i++) {
-                        buffer += "<div class='grid-item'><a href='./blackandwhite/" + i + ".jpg'><img src='./blackandwhite/" + i + ".jpg' title=''></a></div>";
-                    }
-                    $("div.grid").html(buffer);
-                });
-            </script>
+    <div class="spacer s1">
+        <div class="titleMainContainer">
+            <div class="title">CARLOS MONGE</div>
+            <hr class="line">
+            <div class="subtitle">PHOTOGRAPHY</div>
+            <div class="changeSiteVersion">
+                <a href="#" class="icon-ref" onclick="goToBlackAndWhiteVersion();" title="Go to black and white version"><img src="icons/bw.png" class="icon" /></a>
+                <a href="#" class="icon-ref" onclick="goToColorVersion();" title="Go to color version"><img src="icons/color.png" class="icon" /></a>
+            </div>
         </div>
     </div>
-</section>
-
-<footer>
-    <div class="container">
-        <h2 id="options">Carlos Monge &copy; 2016</h2>
-        <div class="social">
-            <a href="#" class="icon-ref"><img src="icons/1467973942_email_mail_envelope_send_message.png" class="icon"/></a>
-            <a href="#" class="icon-ref"><img src="icons/1467973936_facebook_online_social_media.png" class="icon"/></a>
-            <a href="#" class="icon-ref"><img src="icons/1467973939_online_social_media_twitter.png" class="icon"/></a>
-            <a href="#" class="icon-ref"><img src="icons/1467973945_google_plus_online_social_media.png" class="icon"/></a>
-        </div>
-    </div>
-</footer>
-
-<script src="./js/main.js"></script>
+    <script src="./js/ga.js"></script>
 </body>
+
 </html>

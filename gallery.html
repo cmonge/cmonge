@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carlos Monge Photography</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/photobox.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+
+
+    <script src='./js/jquery.photobox.js'></script>
+    <script src="./js/jquery.easing.1.3.js"></script>
+
+    <!-- Image layout -->
+    <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+    <script src="./js/utils.js"></script>
+    <script>
+        checkCookie();
+    </script>
+</head>
+
+<body>
+    <div class="spacer s0"></div>
+    <div id="parallax1" class="parallaxParent"></div>
+
+    <div class="spacer s1">
+        <div class="titleContainer">
+            <div class="title">CARLOS MONGE</div>
+            <hr class="line">
+            <div class="subtitle">PHOTOGRAPHY</div>
+        </div>
+
+        <div id="triggerTittle"></div>
+
+        <section>
+            <div class="container">
+                <div id="gallery" class="grid"></div>
+            </div>
+        </section>
+    </div>
+
+    <div class="spacer s0"></div>
+    <div id="parallax2" class="parallaxParent"></div>
+
+    <section>
+        <div class="container">
+            <div id="gallery2" class="grid"></div>
+        </div>
+    </section>
+
+    <div class="spacer s0"></div>
+    <div id="parallax3" class="parallaxParent"></div>
+
+    <div id="triggerFooter" class="spacer s1" style="position: relative; top: -250px;"></div>
+    <footer>
+        <div class="footerContainer">
+            <h2 id="options">Carlos Monge &copy; 2016</h2>
+            <div class="social">
+                <a href="mailto:monge13@gmail.com" class="icon-ref"><img src="icons/1467973942_email_mail_envelope_send_message.png" class="icon" /></a>
+                <a href="https://www.facebook.com/carlos.monge" target="_blank" class="icon-ref"><img src="icons/1467973936_facebook_online_social_media.png" class="icon" /></a>
+                <a href="https://twitter.com/cmonge" target="_blank" class="icon-ref"><img src="icons/1467973939_online_social_media_twitter.png" class="icon" /></a>
+            </div>
+            <div id="siteVersion" class="changeSiteVersion">
+            </div>
+        </div>
+    </footer>
+
+    <script>init();</script>
+    <script src="./js/main.js"></script>
+    <script src="./js/ga.js"></script>
+</body>
+
+</html>

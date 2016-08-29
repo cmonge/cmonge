@@ -2,11 +2,9 @@
     font-family: principalFont;
     src: url(mulders-handwriting.ttf);
 }
-
 * {
     box-sizing: border-box;
 }
-
 body {
     font-family: sans-serif;
     background-color: black;
@@ -17,9 +15,11 @@ body {
 .grid {
     background: #EEE;
     max-width: 1200px;
+    width: 90vw;
 }
 
 /* clearfix */
+
 .grid:after {
     content: '';
     display: block;
@@ -33,10 +33,10 @@ body {
 }
 
 /* force scrollbar */
+
 html {
     overflow-y: scroll;
 }
-
 body {
     font-family: sans-serif;
 }
@@ -45,9 +45,11 @@ body {
 
 .grid {
     background: #FFF;
+    margin: auto;
 }
 
 /* clear fix */
+
 .grid:after {
     content: '';
     display: block;
@@ -56,72 +58,94 @@ body {
 
 /* ---- .grid-item ---- */
 
-.grid-sizer,
-.grid-item {
-    width: 25%;
+.grid-sizer, .grid-item {
+    width: 50%;
 }
-
 .grid-item {
     float: left;
 }
-
 .grid-item a img {
     display: block;
     max-width: 100%;
 }
-
 section {
     padding: 25px 0 35px;
     background: #fff;
+    margin: auto;
 }
-
-.parallax-container {
-    height: 1200px;
-    width: 100%;
-    margin-top: 0px;
-}
-
 h2 {
     font-family: 'principalFont';
 }
-
-p {
+.quote {
+    line-height: 20px;
     font-family: 'principalFont';
+    font-size: 2.0vw;
+    color: #FFFFFF;
+    position: relative;
+    text-align: left;
+    width: 50vw;
+    margin-left: 50px;
+    top: 15vw;
+    text-shadow: 1px 1px #000000;
 }
-
-footer {
-    background: #000;
-    color: #ddd;
-    padding: 30px 0 30px;
-    text-align: center;
+.quote2 {
+    line-height: 20px;
+    font-family: 'principalFont';
+    font-size: 2.0vw;
+    color: #FFFFFF;
+    position: relative;
+    text-align: right;
+    width: 50vw;
+    margin-right: 50px;
+    top: 15vw;
+    text-shadow: 1px 1px #000000;
+    float: right;
 }
-
+.colorChooser{
+    background-image: url(../color/14.jpg);
+    background-position: center bottom;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
 .titleContainer {
+    z-index: 999;
     position: absolute;
-    top: 300px;
+    top: 25px;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 480px;
+    width: 33%;
     margin: 0 auto;
 }
-
+.titleMainContainer {
+    z-index: 999;
+    position: absolute;
+    top: 40vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
 .title {
     line-height: 50px;
     font-family: 'principalFont';
-    font-size: 32px;
+    font-size: 2.0vw;
     font-weight: bold;
     color: #FFFFFF;
     letter-spacing: 7px;
     text-align: center;
-    text-shadow: 2px 2px #808080;
+    text-shadow: 2px 3px #333333;
 }
-
 hr.line {
     border-top: 1px solid #FFFFFF;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
     text-align: center;
 }
-
 hr.line:after {
     content: '§';
     display: inline-block;
@@ -130,55 +154,151 @@ hr.line:after {
     padding: 0 10px;
     color: #FFFFFF;
     font-size: 18px;
+    text-shadow: 2px 3px #333333;
     -webkit-transform: rotate(60deg);
     -moz-transform: rotate(60deg);
     transform: rotate(60deg);
 }
-
 .subtitle {
     line-height: 5 -px;
     font-family: 'principalFont';
-    font-size: 20px;
+    font-size: 1.5vw;
     font-weight: bold;
     color: #FFFFFF;
     letter-spacing: 5px;
     text-align: center;
-    text-shadow: 2px 2px #808080;
+    text-shadow: 2px 3px #333333;
 }
-
+footer {
+    background: #000;
+    color: #ddd;
+    padding: 30px 0 30px;
+    text-align: center;
+    height: 400px;
+    overflow: hidden;
+}
 footer a {
     color: #ddd;
     text-decoration: none;
+    position: relative;
 }
-
 footer a:hover {
     color: #eee;
     text-decoration: underline;
 }
-
+.changeSiteVersion {
+    margin-top: 40px;
+}
 .icon {
     width: 50px;
     height: 50px;
     margin: 2px;
+    position: relative;
 }
-
+.icon:hover {
+    width: 55px;
+    height: 55px;
+    margin: 2px;
+    position: relative;
+}
 .icon-ref {
     outline: none;
     border: 0px
 }
-
-.icon-mail {
-    background-image: url('..');
+.parallaxParent {
+    overflow: hidden;
+    height: 200px;
+    width: 90vw;
+    margin: auto;
+}
+.parallaxParent> * {
+    height: 200%;
+    position: relative;
+    top: -100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#triggerTittle {
+    position: absolute;
+    top: 525px;
+}
+@media only screen and (min-width: 200px) and (orientation : portrait) {
+    .titleContainer {
+        top: 20px;
+    }
+    .parallaxParent {
+        height: 25vh;
+    }
+    .parallaxParent> * {
+        height: 100vw;
+        position: relative;
+        top: -40vw;
+    }
 }
 
-.icon-facebook {
-    background-image: url('../');
+@media only screen and (min-width: 725px) and (orientation : landscape) {
+    .quote {
+        line-height: 40px;
+        top: 15vw;
+    }
+    .quote2 {
+        line-height: 20px;
+        top: 15vw;
+    }
+    #triggerTittle {
+        top: 550px;
+    }
+    .titleContainer {
+        top: 75px;
+    }
+    .parallaxParent {
+        height: 300px;
+        overflow: hidden;
+    }
 }
-
-.icon-twitter {
-    background-image: url('../');
+@media only screen and (min-width: 900px) and (orientation : landscape) {
+    .quote1 {
+        line-height: 40px;
+        top: 20vw;
+    }
+    .quote2 {
+        line-height: 40px;
+        top: 20vw;
+    }
+    .grid-sizer, .grid-item {
+        width: 33%;
+    }
+    #triggerTittle {
+        top: 550px;
+    }
+    .titleContainer {
+        top: 150px;
+    }
+    .parallaxParent {
+        height: 400px;
+        overflow: hidden;
+    }
 }
-
-.icon-gplus {
-    background-image: url('../');
+@media only screen and (min-width: 1340px) and (orientation : landscape) {
+    .quote1 {
+        line-height: 40px;
+        top: 25vw;
+    }
+    .quote2 {
+        line-height: 40px;
+        top: 25vw;
+    }
+    .grid-sizer, .grid-item {
+        width: 25%;
+    }
+    #triggerTittle {
+        top: 700px;
+    }
+    .titleContainer {
+        top: 300px;
+    }
+    .parallaxParent {
+        height: 700px;
+        overflow: hidden;
+    }
 }
